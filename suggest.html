@@ -9,11 +9,12 @@
 </head>
 <body>
     <header>
-        <img src="logo.jpeg" alt="logo">
+        <img src="/images/ClosetCraft.png" alt="logo">
         <div class="greeting" id="greeting"></div>
         <h1>Hi...</h1>
-        <h1 class="wht">What to Wear Today</h1>
-        <a href="home.html"><h3>Home Page</h3>
+        <h1 class="wht"></h1>
+        <a href="home.html" style="text-decoration: none;">
+          <h3>Home Page</h3>
         </a>
     </header>
 
@@ -21,14 +22,24 @@
         <h2>Your Suggested Outfit</h2>
         <div class="suggestion-box">
             <div class="outfit-item" id="shirt-suggestion">
-                <img src="shirt.jpg" alt="Shirt" class="outfit-image">
+                <img src="images/shirt.jpg" alt="Shirt" class="outfit-image">
                 <p class="item-description">Shirt:</p>
             </div>
             <div class="outfit-item item02" id="pants-suggestion">
-                <img src="pant.jpg" alt="Pants" class="outfit-image">
+                <img src="/images/pant.jpg" alt="Pants" class="outfit-image">
                 <p class="item-description">Pants:</p>
             </div>
         </div>
     </section>
+    <script>
+      let now = new Date();
+      const today = document.querySelector('.wht');
+      function getDay(date) {
+        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        return daysOfWeek[date.getDay()];
+      }
+      const todayDate = getDay(now);
+      today.innerHTML = `${todayDate}'s, outfit:`
+    </script>
 </body>
 </html>
