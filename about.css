@@ -30,6 +30,17 @@ header img{
     height: 8vh;
     width: 5vw;
 }
+header h3 {
+    transform: translate(70rem,-1.5rem);
+    font-size: 180%;
+}
+header h3 a{
+    text-decoration: none;
+    color: #333;
+}
+header h3 a:hover{
+    color: #f4f4f9;
+}
 
 .about-section {
     transform: translate(0rem,5rem);
