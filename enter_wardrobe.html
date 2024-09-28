@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>enter_wardrobe</title>
-    <link rel="stylesheet" href="enter_wardrobe.css">
+    <link rel="stylesheet" href="/styles/enter_wardrobe.css">
+    
 </head>
 <header>
     <div class="navbar">
@@ -27,10 +28,10 @@
 </header>
 
 <body>
-    <div class="main-container">
+    <div class="main-container" style="margin-top:20px;">
         <div class="left-section">
             <h2>Add New Item</h2>
-            <form id="wardrobe-form">
+            <form id="wardrobe-form" ">
                 <div class="input-group">
                     <label for="category">Category</label>
                     <select id="category">
@@ -43,58 +44,55 @@
                 </div>
                 <div class="input-group">
                     <label for="brand">Brand</label>
-                    <input type="text" id="brand" placeholder="Enter Brand" required>
+                    <input type="text" class="js-brand-input" id="brand" placeholder="Enter Brand" required>
                 </div>
                 <div class="input-group">
                     <label for="purchase-date">Date of Purchase</label>
-                    <input type="date" id="purchase-date" required>
+                    <input type="date" class="js-date-input" id="purchase-date" required>
                 </div>
                 <div class="input-group">
                     <label for="size">Size</label>
-                    <input type="text" id="size" placeholder="Enter Size" required>
+                    <input type="text" id="size" class="js-size-input" placeholder="Enter Size" required>
                 </div>
                 <div class="input-group">
                     <label for="color">Color</label>
-                    <input type="text" id="color" placeholder="Enter Color" required>
+                    <input type="text" id="color" class="js-color-input" placeholder="Enter Color" required>
                 </div>
-                <button type="button" id="add-item-button">+Add</button>
+                <button type="button" class="js-add-button" id="add-item-button">+Add</button>
             </form>
         </div>
 
        
         <div class="right-section">
-            <h2>Your Wardrobe</h2>
+            <h2 style="margin-top: 2rem;">Your Wardrobe</h2>
             <div class="wardrobe-display">
-                <div class="category-display" id="shirts-display">
-                    <h3>Shirts</h3>
-                    <div class="items-list"></div>
+                <h3 style="transform: translate(4rem,0.2rem);">Shirts</h3>
+                <div style="transform: translate(-5rem,2rem);" class="category-display-shirts" id="shirts-display">  
                 </div>
-                <div class="category-display" id="pants-display">
-                    <h3>Pants</h3>
-                    <div class="items-list"></div>
+                <h3>Pants</h3>
+                <div style="transform: translate(-10rem,2rem);" class="category-display-pants" id="pants-display"> 
                 </div>
-                <div class="category-display" id="others-display">
-                    <h3>Others</h3>
-                    <div class="items-list"></div>
+                <h3 style="transform: translate(-5.5rem,0rem);">Others</h3>
+                <div style="transform: translate(-15rem,2rem);" class="category-display-others" id="others-display">
                 </div>
             </div>
         </div>
     </div>
     <div class="footer" style="margin-bottom: 0px; transform: translate(0,45rem);">
-        <div class="footer-content">
-            <p style="margin-left: 9vw;">&copy; 2024 Your Company. All Rights Reserved.</p>
-            <div class="footer-links">
-                <a href="/contact.html">Contact Us</a> 
-                <p style="display: contents;">|</p>
-                <a href="https://www.facebook.com/">Facebook</a> 
-                <p style="display: contents;">|</p>
-                <a href="https://x.com/i/flow/login">Twitter</a> 
-                <p style="display: contents;">|</p>
-                <a href="https://www.instagram.com/accounts/login/?hl=en">Instagram</a>
-            </div>
-        </div>
-    </div>
-</div>
-
+      <div class="footer-content"  >
+          <pre style="transform: translate(-1rem,1rem);">&copy; 2024 Closet Craft. All Rights Reserved.</pre>
+          <div class="footer-links" style="transform: translate(-17rem,1rem); ">
+              <a style="margin-left: 16rem;" href="/contact.html">Contact Us</a> 
+              <p style="display: contents;">|</p>
+              <a href="https://www.facebook.com/">Facebook</a> 
+              <p style="display: contents;">|</p>
+              <a href="https://x.com/i/flow/login">Twitter</a> 
+              <p style="display: contents;">|</p>
+              <a href="https://www.instagram.com/accounts/login/?hl=en">Instagram</a>
+          </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/js/enter-wardrobe.js"></script>
 </body>
 </html>
