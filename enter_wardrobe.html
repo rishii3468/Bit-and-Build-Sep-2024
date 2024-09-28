@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>enter_wardrobe</title>
+    <link rel="stylesheet" href="enter_wardrobe.css">
+</head>
+<header>
+    <div class="navbar">
+
+
+        <div class="nav-logo">
+
+        </div>
+
+
+        <div class="nav-title"></div>
+        <ul>
+            <li>Home Page</li>
+            <li>Contact Us</li>
+            <li class="special-item">About Us</li>
+        </ul>
+
+    </div>
+</header>
+
+<body>
+    <div class="main-container">
+        <div class="left-section">
+            <h2>Add New Item</h2>
+            <form id="wardrobe-form">
+                <div class="input-group">
+                    <label for="category">Category</label>
+                    <select id="category">
+                        <option value="Shirts">Shirts</option>
+                        <option value="Pants">Pants</option>
+                        <option value="Sweater">Sweater</option>
+                        <option value="Traditional Wear">Traditional Wear</option>
+                        <option value="Others">Others</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="brand">Brand</label>
+                    <input type="text" id="brand" placeholder="Enter Brand" required>
+                </div>
+                <div class="input-group">
+                    <label for="purchase-date">Date of Purchase</label>
+                    <input type="date" id="purchase-date" required>
+                </div>
+                <div class="input-group">
+                    <label for="size">Size</label>
+                    <input type="text" id="size" placeholder="Enter Size" required>
+                </div>
+                <div class="input-group">
+                    <label for="color">Color</label>
+                    <input type="text" id="color" placeholder="Enter Color" required>
+                </div>
+                <button type="button" id="add-item-button">+Add</button>
+            </form>
+        </div>
+
+       
+        <div class="right-section">
+            <h2>Your Wardrobe</h2>
+            <div class="wardrobe-display">
+                <div class="category-display" id="shirts-display">
+                    <h3>Shirts</h3>
+                    <div class="items-list"></div>
+                </div>
+                <div class="category-display" id="pants-display">
+                    <h3>Pants</h3>
+                    <div class="items-list"></div>
+                </div>
+                <div class="category-display" id="others-display">
+                    <h3>Others</h3>
+                    <div class="items-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer" style="margin-bottom: 0px; transform: translate(0,45rem);">
+        <div class="footer-content">
+            <p style="margin-left: 9vw;">&copy; 2024 Your Company. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="/contact.html">Contact Us</a> 
+                <p style="display: contents;">|</p>
+                <a href="https://www.facebook.com/">Facebook</a> 
+                <p style="display: contents;">|</p>
+                <a href="https://x.com/i/flow/login">Twitter</a> 
+                <p style="display: contents;">|</p>
+                <a href="https://www.instagram.com/accounts/login/?hl=en">Instagram</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
