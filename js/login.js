@@ -11,6 +11,7 @@ user.addEventListener('click',()=>{
     console.log(user.passwd);
     if(user.email === email && user.passwd === passwd){
       window.location.href = "/home.html";
+      localStorage.removeItem('clothes');
       flag = true;
     }
   });

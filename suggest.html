@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What to Wear Today</title>
     <link rel="stylesheet" href="suggest.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
     <header>
@@ -22,24 +23,20 @@
         <h2>Your Suggested Outfit</h2>
         <div class="suggestion-box">
             <div class="outfit-item" id="shirt-suggestion">
-                <img src="images/shirt.jpg" alt="Shirt" class="outfit-image">
-                <p class="item-description">Shirt:</p>
+                <img style="height: 8.4rem;" src="images/shirt.jpg" alt="Shirt" class="outfit-image">
+                <p style="margin-top: 1px;" class="item-description">Shirt:</p>
+                <div class="shirt-suggest-div"></div>
             </div>
             <div class="outfit-item item02" id="pants-suggestion">
                 <img src="/images/pant.jpg" alt="Pants" class="outfit-image">
                 <p class="item-description">Pants:</p>
+                <div class="pant-suggest-div"></div>
             </div>
+           
         </div>
+        <button type="button" style="margin-top: 5vh;" class="btn btn-secondary btn-lg js-new-suggestion-button" onclick="location.reload(true)">New Suggestion</button>
+
     </section>
-    <script>
-      let now = new Date();
-      const today = document.querySelector('.wht');
-      function getDay(date) {
-        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        return daysOfWeek[date.getDay()];
-      }
-      const todayDate = getDay(now);
-      today.innerHTML = `${todayDate}'s, outfit:`
-    </script>
+    <script type="module" src="/js/suggest.js"></script>
 </body>
 </html>

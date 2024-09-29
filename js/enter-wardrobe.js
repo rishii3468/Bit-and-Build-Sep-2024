@@ -25,59 +25,56 @@ function renderPage(){
   let shirtsHTML = '';
   let pantsHTML = '';
   let othersHTML = '';
-  clothes.forEach(cloth => {
-    if(cloth.category === 'Shirts'){
-      
-      shirtsHTML += `
-      <div style="margin-top: 0px;" class="shirt-container"> 
-        <div style="margin-left: 5px;">${cloth.size}</div>
-        <div style="margin-left: 5px;">${cloth.brand}</div>
-        <div style="margin-left: 5px;">${cloth.color}</div>
-      </div>
-      <hr>
-      `;
-    }
-    if(cloth.category === 'Pants'){
-      pantsHTML += `
-      <div style="margin-top: 0px;" class="shirt-container"> 
-        <div style="margin-left: 5px;">${cloth.size}</div>
-        <div style="margin-left: 5px;">${cloth.brand}</div>
-        <div style="margin-left: 5px;">${cloth.color}</div>
-      </div>
-      <hr>
-      `;
-    }
-    if(cloth.category === 'Others' ){
-      othersHTML += `
-      <div style="margin-top: 0px;" class="shirt-container"> 
-        <div style="margin-left: 5px;">${cloth.size}</div>
-        <div style="margin-left: 5px;">${cloth.brand}</div>
-        <div style="margin-left: 5px;">${cloth.color}</div>
-      </div>
-      <hr>
-      `;
-    }
-    if(cloth.category === 'Sweater'){
-      othersHTML += `
-      <div style="margin-top: 0px;" class="shirt-container"> 
-        <div style="margin-left: 5px;">${cloth.size}</div>
-        <div style="margin-left: 5px;">${cloth.brand}</div>
-        <div style="margin-left: 5px;">${cloth.color}</div>
-      </div>
-      <hr>
-      `;
-    }
-    if(cloth.category === 'Traditional Wear'){
-        othersHTML += `
+  clothes.forEach((cloth1,index) => {
+    console.log(typeof cloth1);
+    cloth1.forEach((cloth2) =>{
+      if(index === 0){
+        shirtsHTML += `
         <div style="margin-top: 0px;" class="shirt-container"> 
-          <div style="margin-left: 5px;">${cloth.size}</div>
-          <div style="margin-left: 5px;">${cloth.brand}</div>
-          <div style="margin-left: 5px;">${cloth.color}</div>
+          <div style="margin-left: 5px;">${cloth2.size}</div>
+          <div style="margin-left: 5px;">${cloth2.brand}</div>
+          <div style="margin-left: 5px;">${cloth2.color}</div>
         </div>
         <hr>
         `;
-    }
+      }
+
+      if(index === 1){
+        
+        pantsHTML += `
+        <div style="margin-top: 0px;" class="shirt-container"> 
+          <div style="margin-left: 5px;">${cloth2.size}</div>
+          <div style="margin-left: 5px;">${cloth2.brand}</div>
+          <div style="margin-left: 5px;">${cloth2.color}</div>
+        </div>
+        <hr>
+        `;
+      }
+
+      if(index === 2){
+        
+      othersHTML += `
+      <div style="margin-top: 0px;" class="shirt-container"> 
+        <div style="margin-left: 5px;">${cloth2.size}</div>
+        <div style="margin-left: 5px;">${cloth2.brand}</div>
+        <div style="margin-left: 5px;">${cloth2.color}</div>
+      </div>
+      <hr>
+      `;
+      }
+    });
+
+
+      
+
+
+
+
+  
+
+    
   });
+
   const shirts = document.getElementById('shirts-display');
   shirts.innerHTML = shirtsHTML;
   const pants = document.querySelector('.category-display-pants');

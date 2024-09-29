@@ -169,3 +169,8 @@ main h1 {
 .footer-links a:hover {
     color: #ffd700;
 }
+
+
+.content{
+  margin-left: 28rem;
+}
